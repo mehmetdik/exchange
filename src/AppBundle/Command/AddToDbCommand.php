@@ -34,12 +34,10 @@ class AddToDbCommand extends Command
         $prd_definitions = json_decode(file_get_contents(__DIR__.'/../'.'\Data\provider.json'), true);
 
         foreach ($prd_definitions as $prd_definition){
-
             $provider = new Provider();
             $provider->setUrl($prd_definition['url']);
             $provider->setName($prd_definition['name']);
             $provider->setWrapper($prd_definition['wrapper']);
-
 
             $this->em->persist($provider);
 
@@ -56,11 +54,9 @@ class AddToDbCommand extends Command
 
             }
         }
-
         $this->em->flush();
 
         $output->writeln('The provider was created.');
-
     }
 
 }

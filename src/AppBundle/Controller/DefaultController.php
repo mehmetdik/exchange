@@ -40,9 +40,4 @@ class DefaultController extends Controller
         return $this->render('default/index.html.twig', array('lowest' => $lowest));
 
     }
-
-    public function asd($a)
-    {
-        var_dump($a);die();
-    }
 }
