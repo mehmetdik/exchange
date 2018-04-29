@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Provider Name</th>
+        <th>Price</th>
+        <th>Symbol</th>
+        <th>Main Currency</th>
+    </tr>
+    {% for low in lowest%}
+        <tr>
+            <td>
+                {{ low[0].symbol.provider.name }}
+            </td>
+            <td>
+                {{ low[0].price }}
+            </td>
+            <td>
+                {{ low[0].symbol.code }}
+            </td>
+
+            <td>
+                {{ low[0].symbol.currency.code }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
