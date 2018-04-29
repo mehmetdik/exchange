@@ -11,6 +11,8 @@ Console
 
 currency.json
 --------------
+```sh
+
 [
   {
     "code":"USD"
@@ -22,9 +24,10 @@ currency.json
     "code":"GBP"
   }
 ]
-
+```
 provider.json
 --------------
+```sh
 [
   {
     "name": "provider1",
@@ -67,3 +70,5 @@ provider.json
     ]
   }
 ]
+
+```
